@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MisFits Game</title>
+    <script src="MisFitsGameOriginal.js"></script>
+    <script src="stylesheet.css"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1 style="color: #37b3e8; font-family: 'Distortion Of The Brain And Mind',serif; font-size: 150px; text-shadow: 1px 1px 4px;">
+        MisFits Game</h1>
+    <div id="startGame">
+        <button onclick="startGame()">Begin your adventure</button>
+    </div>
+    <div id="intro">
+        <h2 style="width: 75%;margin: 40px auto;font-family: monospace;color: white;">I awake to find myself surrounded
+            by cyro-pods, which appears to have malfunctioned just like mine. This ship is endlessly drifting in space.
+            I should probably check the computer to see what's going on, but something tells me I also need to leave
+            before anything else malfunctions...</h2>
+        <button onclick="nameRequest()">Start Game</button>
+    </div>
+
+    <div id="inventory">
+        <div id="person">
+            <h2 id="name">Aurora ID:</h2>
+        </div>
+        <div id="tome">
+            <div id="noTome">
+                <img src="noTome.png" height="150px" alt="">
+            </div>
+            <div id="hasTome">
+                <img src="tome.png" height="150px" alt="">
+            </div>
+        </div>
+        <div id="gun">
+            <div id="noGun">
+                <img src="noGun.png" height="150px" alt="">
+            </div>
+            <div id="hasGun">
+                <img src="gun.png" height="150px" alt="">
+            </div>
+        </div>
+        <div id="battery">
+            <div id="noBattery">
+                <img src="noBattery.png" height="150px" alt="">
+            </div>
+            <div id="hasBattery">
+                <div id="batteryNum">-</div>
+                <img src="battery.png" height="150px" alt="">
+            </div>
+        </div>
+        <div id="pin">
+            <div id="pinNum1" class="pinNum">-</div>
+            <div id="pinNum2" class="pinNum">-</div>
+            <div id="pinNum3" class="pinNum">-</div>
+            <div id="pinNum4" class="pinNum">-</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+<style>
+    body {
+        margin: 0;
+        background-color: #3d3e46;
+    }
+
+    button {
+        border-style: none;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #3823c2;
+        box-shadow: 1px 1px 8px #000;
+        color: white;
+    }
+
+    button:hover {
+        background-color: #542eff;
+    }
+
+    button:active {
+        background-color: #3823c2;
+    }
+
+    input {
+        border-style: none;
+        border-radius: 10px 0 0 10px;
+        padding: 10px;
+        box-shadow: 1px 1px 8px #000;
+        color: black;
+    }
+
+    #inventory {
+        height: 200px;
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+    }
+
+    #person {
+
+    }
+
+    #name {
+        margin-top: 0;
+        text-align: left;
+        padding-left: 20px;
+        font-family: monospace;
+    }
+
+    #tome {
+        float: left;
+    }
+
+    #noTome {
+        display: block;
+        float: left;
+    }
+
+    #hasTome {
+        display: none;
+        float: left;
+    }
+
+    #gun {
+        float: left;
+    }
+
+    #noGun {
+        display: block;
+        float: left;
+    }
+
+    #hasGun {
+        display: none;
+        float: left;
+    }
+
+    #battery {
+        float: left;
+        margin-left: 20px;
+    }
+
+    #noBattery {
+        display: block;
+        float: left;
+    }
+
+    #hasBattery {
+        display: none;
+        float: left;
+    }
+
+    #batteryNum {
+        position: absolute;
+        margin: 60px 0 0 48px;
+        color: white;
+    }
+
+    #pin {
+        float: left;
+        margin-left: 20px;
+        height: 150px;
+        padding-top: 40px;
+    }
+
+    .pinNum {
+        float: left;
+        background-color: black;
+        color: white;
+        border: 4px solid #ff563c;
+        padding: 15px;
+        font-size: 25px;
+    }
+
+    .container {
+        width: auto;
+        height: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #startGame {
+        display: block;
+    }
+
+    #intro {
+        display: none;
+    }
+
+    .hasPin {
+        border: 4px solid #37b3e8!important;
+    }
+</style>
